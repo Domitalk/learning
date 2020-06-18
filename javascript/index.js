@@ -1,1 +1,1 @@
-document.getElementById('date').innerHTML = new Date().toDateString();
+// get elemenet by ____ and then do something to it
