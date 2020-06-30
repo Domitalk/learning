@@ -86,6 +86,27 @@
 to make sure you can't submit unless it is filled -->
 <input type="text" required>
 
+<!-- making radio buttons. -->
+<!-- radio buttons on where you can only choose one thing out of a list of dots -->
+<!-- radio buttons are a type of input element-->
+<!-- with radio buttons, you have to have a enclosing label element and then put a input inside the label -->
+<!-- all the options for the radio should have the same name="" attribute to make a group. it will make it so only one can be chosen  -->
+<!-- it is also best practice to give the label element a for="" attribute with the input element matching id="" -->
+
+<form>
+  <label for="indoor">
+    <!-- the for="" and id="" attr match  -->
+    <input id="indoor" type="radio" name="indoor-outdoor"> Indoor
+    <!-- the name="" attr creates a shared group  -->
+  </label>
+  <label for="outdoor">
+    <input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor
+  </label>
+</form>
+
+
+
+
 
 
 
