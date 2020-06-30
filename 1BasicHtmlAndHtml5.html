@@ -118,6 +118,30 @@ to make sure you can't submit unless it is filled -->
   </label>
 </form>
 
+<!-- keeping the value, aka form data in some manageable form for memory -->
+<!-- for radioes and checkboxes, the input field can have preset value attributes for each so that you don't have to go back to form data -->
+<!-- the default value of radio is "=on" so for indoor-outdoor it would be "indoor-outdoor=on" like, clicked -->
+<!-- it's not super useful if there are two options and we want to know which one -->
+<form action="/submit-cat-photo">
+  <label><input type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+  <label><input type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
+  <label><input type="checkbox" name="personality" value="loving"> Loving</label>
+  <label><input type="checkbox" name="personality" value="lazy"> Lazy</label>
+  <label><input type="checkbox" name="personality" value="energetic"> Energetic</label><br>
+  <input type="text" placeholder="cat photo URL" required>
+  <button type="submit">Submit</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
