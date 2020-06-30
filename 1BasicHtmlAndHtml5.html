@@ -92,7 +92,6 @@ to make sure you can't submit unless it is filled -->
 <!-- with radio buttons, you have to have a enclosing label element and then put a input inside the label -->
 <!-- all the options for the radio should have the same name="" attribute to make a group. it will make it so only one can be chosen  -->
 <!-- it is also best practice to give the label element a for="" attribute with the input element matching id="" -->
-
 <form>
   <label for="indoor">
     <!-- the for="" and id="" attr match  -->
@@ -103,6 +102,22 @@ to make sure you can't submit unless it is filled -->
     <input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor
   </label>
 </form>
+
+<!-- checkboxes are for situations where you can choose more than one option -->
+<!-- ie: all that apply -->
+<!-- same rules as radio just not exclusive in UI -->
+<form>
+  <label for="loving">
+    <input id="loving" type="checkbox" name="personality"> Loving
+  </label>
+  <label for="shy">
+    <input id="shy" type="checkbox" name="personality"> Shy
+  </label>
+  <label for="playful">
+    <input id="playful" type="checkbox" name="personality"> Playful
+  </label>
+</form>
+
 
 
 
