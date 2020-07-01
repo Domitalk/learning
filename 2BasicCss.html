@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 
 <html>
+<!-- the other way of changing style is to make a style element/block -->
+<style>
+    h2 {
+        color: blue;
+    }
+</style>
+
+<!-- inline takes priority over style element block because its more specific -->
+
     <!-- the style attr of any HTML element can access the CSS  -->
     <!-- but this form of inline CSS editing isn't the best because it's all in the HTML and seperation of concerns obv -->
     <h2 style="color : red;">CatPhotoApp</h2>
+    <h2>CatPhotoApp</h2>
+
+
     <main>
     <p>Click here to view more <a href="#">cat photos</a>.</p>
 
