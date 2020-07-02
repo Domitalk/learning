@@ -2,12 +2,29 @@
 
 <html>
 <!-- the other way of changing style is to make a style element/block -->
+
+
+<!-- fonts can be imported from outside sources. -->
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<!-- In order to call the font, must specify it below or in CSS file look at h3 selector for example -->
+
+
 <style>
     /* just the element type selects all of the applicable elements, specificity overrides */
     h2 {
         color: blue;
         font-size: 30px;
         font-family: sans-serif;
+    }
+
+    /* h3 {
+    font-family: FAMILY_NAME, GENERIC_NAME;.
+    } */
+    /* Lobster is the name of the font from google fonts, it should go FAMILY_NAME as string
+    GENERIC_NAME is optional  */
+
+    h3 {
+        font-family: "Lobster";
     }
 
     /* classes are reuseable across the project signified with dot .  */
