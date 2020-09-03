@@ -104,6 +104,15 @@
         color: pink;
     }
 
+    /* the one declared later will override, the code goes from top to bottom 
+    if same specificity, the one later will just override the previous  */
+    /* so if something has two classes, the one in style that is declared later will show  */
+    /* class="class1 class2" */
+    .blue-text {
+        color: blue;
+    }
+
+
     /* every single html page has body even if it's not written in  */
     body {
         background-color: black;
