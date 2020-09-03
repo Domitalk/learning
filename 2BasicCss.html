@@ -31,6 +31,7 @@
     /* classes are reuseable across the project signified with dot .  */
     .blue-text {
         color: blue;
+        
     }
 
     /* sizing images  */
@@ -98,13 +99,15 @@
         padding: 1.5em;
     }
 
-    /* every single html page has body even if it's not written in  */
-    body {
-        /* background-color: black;
-        color: green; */
-        font-family: monospace;
+    /* specificity override  */
+    .pink-text {
+        color: pink;
     }
 
+    /* every single html page has body even if it's not written in  */
+    body {
+        background-color: black;
+    }
 
 
 </style>
