@@ -114,9 +114,9 @@
 
 
     /* every single html page has body even if it's not written in  */
-    body {
+    /* body {
         background-color: black;
-    }
+    } */
 
     /* id obviously is more specific than class and will override  */
     /* inline will override id  */
@@ -141,6 +141,22 @@
     } */
 
 
+    /* you can assign variables in css also denote with  */
+    /* you need to nest the actual elements inside of the specific div though  */
+    .specific {
+        --example-of-variable: blue;
+        --example-of-var-text: black;
+    }
+    /* if you change the above definition, the latter uses will change with it.  */
+    .specific-div {
+        background-color: var(--example-of-variable);
+    }
+    /* you can give it a fallback, in case something goes wrong  */
+    .specific-h1 {
+        color: var(--example-of-var-text, gray);
+    }
+
+
 
 </style>
 
@@ -155,7 +171,12 @@
 
     <main>
     <p>Click here to view more <a href="#">cat photos</a>.</p>
-    
+
+    <div class="specific">
+        <div class="specific-div">
+            <h4 class="specific-h1">HELLO EXAMPLE</h4>
+        </div>
+    </div>
     
     
     <!-- you can apply more than one class 
