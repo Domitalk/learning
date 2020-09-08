@@ -148,7 +148,11 @@
         --example-of-var-text: black;
     }
     /* if you change the above definition, the latter uses will change with it.  */
+    /* because the last one declared overwrites, 
+    in case of browswer incompatability you can declare a default 
+    before the variable declaration as the fallback  */
     .specific-div {
+        background-color: red;
         background-color: var(--example-of-variable);
     }
     /* you can give it a fallback, in case something goes wrong  */
