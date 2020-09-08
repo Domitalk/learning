@@ -154,7 +154,10 @@
     :root {
         --penguin-belly: pink;
     }
-
+    /* you can then overwrite the variable if need be at lower, more specific levels */
+    .penguin {
+        --penguin-belly: white; 
+    }
 
     /* if you change the above definition, the latter uses will change with it.  */
     /* because the last one declared overwrites, 
