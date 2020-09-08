@@ -148,6 +148,14 @@
         --example-of-variable: blue;
         --example-of-var-text: black;
     }
+    /* because of CSS variable inheritance, 
+    you can define all the variables in the pseudo-class ':root' 
+    in order to make it universally available */
+    :root {
+        --penguin-belly: pink;
+    }
+
+
     /* if you change the above definition, the latter uses will change with it.  */
     /* because the last one declared overwrites, 
     in case of browswer incompatability you can declare a default 
