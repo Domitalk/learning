@@ -154,6 +154,15 @@
     :root {
         --penguin-belly: pink;
     }
+    /* one of the most awesome ways to use CSS variable decs 
+    is to do adaptive changes that sweep the whole page  */
+    @media (max-width: 350px) {
+        :root {
+            --penguin-size: 200px; 
+            --penguin-skin: black; 
+        }
+    }
+
     /* you can then overwrite the variable if need be at lower, more specific levels */
     .penguin {
         --penguin-belly: white; 
