@@ -31,8 +31,18 @@
         .cardContent {
         padding: 10px;
         }
+        /* box shadow property takes offset-x, offset-y, blur-radius, spread-radius, and color  */
+        /* it absolutely needs offset-x (how far to push shadow horizontal) offset-y (how far to push shadow vertically) and color  */
+        /* multiple boxes can be made at once with commas seperating each box  */
+        /* so the below example will have 0 x-axis change, a little y-axis and some blur but no spread-raidus  */
+        /* the blur radius is the primary factor here in creating the shadow effect, even though there is no x-axis change there will still be shadows on the side because of blur  */
+        #thumbnail {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+
+
     </style>
-    <div class="fullCard">
+    <div class="fullCard" id="thumbnail">
         <div class="cardContent">
         <div class="cardText">
             <!-- s tag will apply text-decoration: line-through; to the text  -->
