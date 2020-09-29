@@ -54,6 +54,31 @@
             color: blue; 
         }
 
+        /* position relative makes it offset from the original position 
+        other elements pretend it's still where it originally was 
+        so using position: relative; will only change the one elemenet  */
+
+        /* the top modifier value moves it AWAY from the top by those amt of px */
+        h2 {
+            position: relative; 
+            top: 15px;
+        }
+
+        /* position absolute takes it out of the mapping for other elements 
+        it also makes it fixed to its parent 
+        you have to state position relative to the parent you want to anchor it to 
+        or else it'll just go absolute on the body tag 
+        which means a position relative somewhere else could mess it up so always position: relative; on parent element  */
+        #searchbar {
+            position: absolute; 
+            top: 50px; 
+            right: 50px;
+        }
+        section {
+            position: relative;
+        }
+
+
 
     </style>
     <div class="fullCard" id="thumbnail">
@@ -73,6 +98,13 @@
             <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
         </div>
         </div>
+        <section>
+            <form id="searchbar">
+              <label for="search">Search:</label>
+              <input type="search" id="search" name="search">
+              <input type="submit" name="submit" value="Go!">
+            </form>
+        </section>        
     </div>
   </html>
   
