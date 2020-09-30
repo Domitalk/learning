@@ -78,6 +78,19 @@
             position: relative;
         }
 
+        /* position fixed is like position absolute but more strict
+        absolute is anchored on the body or the parent element 
+        so you can scroll away from it. 
+        position fixed is anchored on the window view port 
+        so the user always sees it in the same place  */
+        #navbar {
+            position: fixed; 
+            top: 0px; 
+            left: 0px;
+            width: 100%;
+            background-color: #767676;
+        }
+
 
 
     </style>
@@ -105,6 +118,12 @@
               <input type="submit" name="submit" value="Go!">
             </form>
         </section>        
+        <nav id="navbar">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+        </nav>      
     </div>
   </html>
   
