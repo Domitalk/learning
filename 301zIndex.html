@@ -1,0 +1,27 @@
+<style>
+    div {
+      width: 60%;
+      height: 200px;
+      margin-top: 20px;
+    }
+  
+    /* usually the default behavior is that the later items show up on top because the code is processed top to bottom 
+    but z-index can make something show up on top even if it was declared first 
+    the higher the value, the closer it is to the user  */
+    .first {
+      background-color: red;
+      position: absolute;
+      z-index: 2;
+    }
+    .second {
+      background-color: blue;
+      position: absolute;
+      left: 40px;
+      top: 50px;
+      z-index: 1;
+    }
+  </style>
+  
+  <div class="first"></div>
+  <div class="second"></div>
+  
