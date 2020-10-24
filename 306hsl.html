@@ -1,0 +1,33 @@
+<style>
+    body {
+      background-color: #FFFFFF;
+    }
+  
+
+    /* css3 created something called hsl() to take in more specific color values 
+    h is for hue and it takes in a value 0 - 360 as a position on the color wheel 
+    s is for saturation of the chosen color. if it is 100% it is fully saturated and shows no gray, if at 0% it is fully gray 
+    l is for lightness, normal lightness is  50% where 0% is black and 100% is white */
+
+    /* the following examples would show a color with full saturation of that color and normal lightness  */
+    .green {
+      background-color: hsl(120, 100%, 50%);
+    }
+    .cyan {
+      background-color: hsl(180, 100%, 50%);
+    }
+    .blue {
+      background-color: hsl(240, 100%, 50%);
+    }
+  
+    div {
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+  
+  <div class="green"></div>
+  <div class="cyan"></div>
+  <div class="blue"></div>
+  
