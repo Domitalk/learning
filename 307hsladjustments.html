@@ -1,0 +1,46 @@
+<style>
+    header {
+      background-color: hsl(180, 90%, 35%);
+      color: #FFFFFF;
+    }
+  
+    /* the default background-color is transparent
+    so nav would just show the parent (header)s background color
+    but you can set the nav to slightly adjust the color a bit by changing the saturation and lightness attributes in hsl 
+    this will make it so that the color is the same but hue is a little different  */
+    nav {
+      background-color: hsl(180, 80%, 25%);
+    }
+  
+    h1 {
+      text-indent: 10px;
+      padding-top: 10px;
+    }
+  
+    nav ul {
+      margin: 0px;
+      padding: 5px 0px 5px 30px;
+    }
+  
+    nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+  
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+  
+  <header>
+    <h1>Cooking with FCC!</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Classes</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
