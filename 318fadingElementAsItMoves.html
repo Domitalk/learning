@@ -1,0 +1,35 @@
+<style>
+
+    #ball {
+      width: 70px;
+      height: 70px;
+      margin: 50px auto;
+      position: fixed;
+      left: 20%;
+      border-radius: 50%;
+      background: linear-gradient(
+        35deg,
+        #ccffff,
+        #ffcccc
+      );
+      animation-name: fade;
+      animation-duration: 3s;
+    }
+  
+    /* as this guy moves to the left during the keyframe 
+    the opacity will also change 
+    so that by the time it gets to 50% it will have opacity 0.1 
+
+    the resulting use experience is that an object goes from left to right 
+    and it looks like it's fading out as it does so  */
+    @keyframes fade {
+      50% {
+        left: 60%;
+        opacity: 0.1;
+      }
+    }
+  
+  </style>
+  
+  <div id="ball"></div>
+  
