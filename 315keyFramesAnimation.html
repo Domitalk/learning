@@ -1,0 +1,38 @@
+<style>
+    div {
+      height: 40px;
+      width: 70%;
+      background: black;
+      margin: 50px auto;
+      border-radius: 5px;
+    }
+  
+    /* here we're going selec the dom object  */
+    #rect {
+        /* animation-name will define name of the object in css for @keyframes to apply to  */
+      animation-name: rainbow; 
+        /* animation-duration will define the duration of the animation  */
+      animation-duration: 4s;
+    }
+    
+    /* here CSS @keyframes will select rainbow, which was defined above  */
+    @keyframes rainbow {
+        /* at 0% of the 4s it will do this  */
+      0% {
+        background-color: blue;
+      }
+        /* at 50% of the 4s it will do this  */
+      50% {
+        background-color: green;
+      }
+        /* at 100% of the 4s it will do this  */
+      100% {
+        background-color: yellow;
+      }
+    }
+  
+  
+  
+  </style>
+  <div id="rect"></div>
+  
