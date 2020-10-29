@@ -4,13 +4,17 @@
       height: 100px;
       margin:  50px auto;
     }
+    /* skewY obviously skews an element up and down */
     #top {
       background-color: red;
+      transform: skewY(-10deg);
     }
+    /* skewX skews an element left and right  */
     #bottom {
       background-color: blue;
         transform: skewX(24deg);
     }
+    /* it's like grabbing corners on opposite ends and then pull/sliding depending on the axis  */
   </style>
   
   <div id="top"></div>
