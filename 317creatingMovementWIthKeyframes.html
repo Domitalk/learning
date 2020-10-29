@@ -1,0 +1,43 @@
+<style>
+    div {
+      height: 40px;
+      width: 70%;
+      background: black;
+      margin: 50px auto;
+      border-radius: 5px;
+      position: relative;
+    }
+  
+    #rect {
+      animation-name: rainbow;
+      animation-duration: 4s;
+    }
+  
+
+    /* the top and left positioning values in keyframes 
+    will make it so that there is a movement in the position of the obj */
+    
+    /* because both top and left positions were used, it will move up and down and left to right  */
+
+    /* the color of the object will also change as it move back and forth  */
+    @keyframes rainbow {
+      0% {
+        background-color: blue;
+        top: 0px;
+        left: 0px;
+      }
+      50% {
+        background-color: green;
+        top: 50px;
+        left: 25px;
+      }
+      100% {
+        background-color: yellow;
+        top: 0px;
+        left: -25px;
+      }
+    }
+  </style>
+  
+  <div id="rect"></div>
+  
