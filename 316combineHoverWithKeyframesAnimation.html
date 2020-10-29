@@ -1,0 +1,28 @@
+<style>
+    button {
+      border-radius: 5px;
+      color: white;
+      background-color: #0F5897;
+      padding: 5px 10px 8px 10px;
+    }
+  
+    /* in this situation, the @keyframes "background-color" is only defined when there is hover  */
+    button:hover {
+      animation-name: background-color;
+      animation-duration: 500ms;
+    }
+  
+    /* when hover is triggered, this keyframes will also trigger  */
+    @keyframes background-color {
+      100% {
+          /* the color will slightly change at this point because there is only a 100% value at the end of 1s  */
+        background-color: #4791d0;
+      }
+    }
+    /* the result is a 1s animation which starts with nothing, but ends with a transition to a different color and disappears at the end of 1s  */
+  
+  
+  </style>
+  
+  <button>Register</button>
+  
