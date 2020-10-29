@@ -10,6 +10,10 @@
     button:hover {
       animation-name: background-color;
       animation-duration: 500ms;
+
+      /* this was added later to make it so that the flash of color isn't temporary but keeps until hover ends  */
+      animation-fill-mode: forwards;
+
     }
   
     /* when hover is triggered, this keyframes will also trigger  */
