@@ -1,0 +1,54 @@
+<style>
+
+    .balls{
+      border-radius: 50%;
+      background: linear-gradient(
+        35deg,
+        #ccffff,
+        #ffcccc
+      );
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      margin-top: 50px;
+      animation-name: bounce;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    /* the cubic-bezier function is a way to manually control the the animation-timing-function instead of using one of the keywords 
+    the inputs given to a cubic-bezier are (x1, y1, x2, y2)
+    the grid that cubic-bezier operates on actually has 4 points of references on a graph 
+    the first is (0, 0) and the last is (1, 1)
+    (x1, y1) is p1/the SECOND point AND (x2, y2) the p2/the THIRD point on the graph 
+    x is time and y is position so (0, 0) as p0 means that it starts off at 0% of transitional space at 0% of time 
+    then (1, 1) means that at the end of the animation time the transition is at the 100% limit of the space position 
+    AGAIN, x is TIME y is SPACE . each represent a percentage value of the limits of each timeframe and space-perscribed 
+
+    p1 and p2 values will then create a curve based on the values given. or in the case of (0.25, 0.25, 0.75, 0.75) a straight line 
+    as all the points of the graph are in a straight line it will be exactly the same */
+
+
+    #ball1 {
+      left: 27%;
+      animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+    }
+    #ball2 {
+      left: 56%;
+      animation-timing-function: ease-out;
+    }
+  
+    @keyframes bounce {
+      0% {
+        top: 0px;
+      }
+      100% {
+        top: 249px;
+      }
+    }
+  
+  </style>
+  
+  <div class="balls" id="ball1"></div>
+  <div class="balls" id="ball2"></div>
+  
