@@ -1,0 +1,38 @@
+<style>
+    .balls{
+      border-radius: 50%;
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      margin-top: 50px;
+      animation-name: bounce;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    /* ease-out slows down towards the end 
+    with the cubic bezier values shown here, the graph looks flat at first and speeds up near the 0.58 time point to 1.0 space and turns flat.
+    this would mean that there is a big jump around the early-middle but the end is super slow if it was visualized as movement 
+    because the x1,y1 points are 0, 0 that means there is a straight line from 0,0 to 0.58, 1 so a fast movement at first 
+    then the line peters out after 0.58, 1 because the y value can't increase.  */
+    #red {
+      background: red;
+      left: 27%;
+      animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+    }
+    #blue {
+      background: blue;
+      left: 56%;
+      animation-timing-function: ease-out;
+    }
+    @keyframes bounce {
+      0% {
+        top: 0px;
+      }
+      100% {
+        top: 249px;
+      }
+    }
+  </style>
+  <div class="balls" id= "red"></div>
+  <div class="balls" id= "blue"></div>
+  
