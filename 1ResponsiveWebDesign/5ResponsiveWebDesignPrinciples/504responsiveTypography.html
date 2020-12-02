@@ -1,0 +1,20 @@
+<!-- there are 4 different viewport units 
+1. vw viewport width 
+2. vh viewport height 
+3. vmin viewport minimum, whichever smaller dimension 
+4. vmax viewport max, whichever larger dimension 
+
+when using these values, it's going to be super important to seperate vmin/vmax based on mobile or desktop because obviously the orientation is the opposite and the min/max will be different based on that. 
+what'll probably happen is that there'll be a @media query and based on that a subset of vh/vw or vm/vh based on the circumstances on the query rather than a vmin/vmax unless it's for something peculiar  -->
+
+<style>
+    h2 {
+        width: 80vw;
+    }
+    p {
+        width: vmin;
+    }
+</style>
+
+<h2>Importantus Ipsum</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
