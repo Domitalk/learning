@@ -1,0 +1,26 @@
+<style>
+    /* the display: flex; property makes the CHILDREN flex, the property actually creates a flex container 
+    in that, you can change the way in which the children are flexing inside of the container with row, row-reverse, column, and column-reverse.
+    the default is row  */
+    #box-container {
+      display: flex;
+      height: 500px;
+      flex-direction: row-reverse;
+    }
+    #box-1 {
+      background-color: dodgerblue;
+      width: 50%;
+      height: 50%;
+    }
+  
+    #box-2 {
+      background-color: orangered;
+      width: 50%;
+      height: 50%;
+    }
+  </style>
+  
+  <div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+  </div>
