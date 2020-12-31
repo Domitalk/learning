@@ -1,0 +1,30 @@
+<style>
+    #box-container {
+      background: gray;
+      display: flex;
+      height: 500px;
+      justify-content: center;
+      /* in this case there are two elements and they only take up 50% of the space. 
+      the default is to flex-start so that everything is flex beginning from the beginning of the axis
+      flex-end makes the stacking start at the end of the axis 
+      space-between centers on the axis and spaces equal between elements but when there is space left over, it'll make the elements go to the edges of the axis 
+      space-around makes it so the first and last elements aren't at the edges of the axis and get HALF spaces between them and the edge 
+      space-evenly makes it like space-around but with FULL space at the edges  */
+    }
+    #box-1 {
+      background-color: dodgerblue;
+      width: 25%;
+      height: 100%;
+    }
+  
+    #box-2 {
+      background-color: orangered;
+      width: 25%;
+      height: 100%;
+    }
+  </style>
+  
+  <div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+  </div>
