@@ -1,0 +1,30 @@
+<style>
+    #box-container {
+      background: gray;
+      display: flex;
+      height: 500px;
+      align-items: center;
+      /* while justify-content determines how flex items align on the main axis, align-items determines how the flex items align on the cross-axis */
+      /* so in a normal flex container that behaves like rows of items, the align-items will determine how the veritcal alignment will behave */
+      /* in this case, the items will line up side by side because of the flex property but the vertical behavior is undefined so it will just fill the space available in the parent  */
+      /* filling in the vertical space available in parent means that the children will go from top to bottom all the way  */
+      /* by giving the value of 'center' to 'align-items' we give it a behavioral aspect of just using what it needs (if undefined in their specific css) and nothing more at the center line  */
+      /* the other options are flex-start which will mean it will go to the top, flex-end which will push elements down, stretch to fill all available space - the default, and baseline where the text sits instead of the normal flex-start  */
+    }
+    #box-1 {
+      background-color: dodgerblue;
+      width: 200px;
+      font-size: 24px;
+    }
+  
+    #box-2 {
+      background-color: orangered;
+      width: 200px;
+      font-size: 18px;
+    }
+  </style>
+  
+  <div id="box-container">
+    <div id="box-1"><p>Hello</p></div>
+    <div id="box-2"><p>Goodbye</p></div>
+  </div>
