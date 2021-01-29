@@ -1,0 +1,26 @@
+<style>
+    /* conversely of flex-shrink, flex-grow is the opposite. when the flex container is too big for the elements inside to fully show off their comparative proportions, this prop allows us to determine the scale in which the items grow into their flex container  */
+  
+  /* as the flex container grows, at some point the max size of the elements will be surpassed and the elements will look small and/or equal to each other at some point.  */
+    #box-container {
+      display: flex;
+      height: 500px;
+    }
+  
+    #box-1 {
+      background-color: dodgerblue;
+      height: 200px;
+      flex-grow: 1;
+    }
+  
+    #box-2 {
+      background-color: orangered;
+      height: 200px;
+    flex-grow: 2; 
+    }
+  </style>
+  
+  <div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+  </div>
