@@ -1,0 +1,54 @@
+<style>
+    /* flex-wrap property tells CSS how to wrap items, it usually tries to fit all of it into the row  */
+    /* default is nonwrap  */
+    /* wrap does left to right if in a row, and top-to-bottom if in column  */
+    /* wrap-reverse --- self explanatory  */
+    #box-container {
+      background: gray;
+      display: flex;
+      height: 100%;
+      /* some of these elements are sized too big but the default setting nonwrap makes it so they all fit into one row.  */
+      flex-wrap: wrap;
+      /* adding flex-wrap:wrap; property will make it so that if the elements need more space, then they'll go to the next row instead of scrunching up all into the same one  */
+    }
+    #box-1 {
+      background-color: dodgerblue;
+      width: 25%;
+      height: 50%;
+    }
+  
+    #box-2 {
+      background-color: orangered;
+      width: 25%;
+      height: 50%;
+    }
+    #box-3 {
+      background-color: violet;
+      width: 25%;
+      height: 50%;
+    }
+    #box-4 {
+      background-color: yellow;
+      width: 25%;
+      height: 50%;
+    }
+    #box-5 {
+      background-color: green;
+      width: 25%;
+      height: 50%;
+    }
+    #box-6 {
+      background-color: black;
+      width: 25%;
+      height: 50%;
+    }
+  </style>
+  
+  <div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+    <div id="box-3"></div>
+    <div id="box-4"></div>
+    <div id="box-5"></div>
+    <div id="box-6"></div>
+  </div>
