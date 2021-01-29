@@ -1,0 +1,28 @@
+<style>
+    #box-container {
+      display: flex;
+      height: 500px;
+    }
+  /* flex-basis is the default shrink/grow value you can give the items before the flex-shrink and flex-grow values kick in.  */
+  
+  /* you can use px, em, % etc for flex-basis prop */
+  
+  /* this is kind of like a suped up width in this case  */
+    #box-1 {
+      background-color: dodgerblue;
+      height: 200px;
+    flex-basis: 10em;
+    }
+  
+    #box-2 {
+      background-color: orangered;
+      height: 200px;
+    flex-basis: 20em;
+  
+    }
+  </style>
+  
+  <div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+  </div>
