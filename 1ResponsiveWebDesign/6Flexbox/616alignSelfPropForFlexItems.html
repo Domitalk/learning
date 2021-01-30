@@ -1,0 +1,32 @@
+<style>
+
+    /* another flex item prop is align-self, while the flex container takes align-items as a prop, the individual items can take a align-self  */
+  
+    /* this is more specific, so it will override the align-items prop in the container  */
+  
+    /* it takes the same values as align-items */
+  
+  
+    #box-container {
+      display: flex;
+      height: 500px;
+    }
+    #box-1 {
+      background-color: dodgerblue;
+      align-self: center; 
+      height: 200px;
+      width: 200px;
+    }
+  
+    #box-2 {
+      background-color: orangered;
+      align-self: flex-end; 
+      height: 200px;
+      width: 200px;
+    }
+  </style>
+  
+  <div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+  </div>
