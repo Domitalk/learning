@@ -8,6 +8,7 @@ suite('Unit Tests', function () {
     // #1
     test('#isNull, #isNotNull', function () {
       assert.isNull(null, 'this is an optional error description - e.g. null is null');
+      // assert that within this call of isNull function, the first value is null and the second value is the error message 
       assert.isNotNull(1, '1 is not null');
     });
     // #2
