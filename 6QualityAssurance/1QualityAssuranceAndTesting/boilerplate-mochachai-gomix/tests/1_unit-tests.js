@@ -34,11 +34,19 @@ suite('Unit Tests', function () {
       assert.isOk(true, 'true is truthy');
       // true is truthy 
     });
+
+    // Within tests/1_unit-tests.js under the test labelled #4 in the Basic Assertions suite, change each assert to either assert.isTrue or assert.isNotTrue to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #4
     test('#isTrue, #isNotTrue', function () {
-      assert.fail(true, 'true is true');
-      assert.fail(!!'double negation', 'double negation of a truthy is true');
-      assert.fail({ value: 'truthy' }, 'A truthy object is NOT TRUE (neither is false...)');
+      // this is hard true check 
+      // assert.isTrue(true, 'this will pass with the boolean value true');
+      // assert.isTrue('true', 'this will NOT pass with the string value 'true');
+      // assert.isTrue(1, 'this will NOT pass with the number value 1');
+
+      assert.isTrue(true, 'true is true');
+      assert.isTrue(!!'double negation', 'double negation of a truthy is true');
+      assert.isNotTrue({ value: 'truthy' }, 'A truthy object is NOT TRUE (neither is false...)');
     });
   });
 
