@@ -21,11 +21,18 @@ suite('Unit Tests', function () {
       assert.isUndefined(undefined, 'undefined IS undefined');
       assert.isDefined('hello', 'a string is not undefined');
     });
+
+    // Within tests/1_unit-tests.js under the test labelled #3 in the Basic Assertions suite, change each assert to either assert.isOk() or assert.isNotOk() to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #3
     test('#isOk, #isNotOk', function () {
-      assert.fail(null, 'null is falsey');
-      assert.fail("I'm truthy", 'a string is truthy');
-      assert.fail(true, 'true is truthy');
+      // isOk and isNotOK is truthy vs falsey 
+      assert.isNotOk(null, 'null is falsey');
+      // null is falsey
+      assert.isOk("I'm truthy", 'a string is truthy');
+      // strings are truthy
+      assert.isOk(true, 'true is truthy');
+      // true is truthy 
     });
     // #4
     test('#isTrue, #isNotTrue', function () {
