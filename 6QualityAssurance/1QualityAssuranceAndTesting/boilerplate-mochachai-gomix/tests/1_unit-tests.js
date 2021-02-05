@@ -53,12 +53,19 @@ suite('Unit Tests', function () {
   // -----------------------------------------------------------------------------
 
   suite('Equality', function () {
+    // Equality assertions check == 
+
+
+    // Within tests/1_unit-tests.js under the test labelled #5 in the Equality suite, change each assert to either assert.equal or assert.notEqual to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #5
     test('#equal, #notEqual', function () {
-      assert.fail(12, '12', 'numbers are coerced into strings with == ');
-      assert.fail({ value: 1 }, { value: 1 }, '== compares object references');
-      assert.fail(6 * '2', '12', 'no more hints...');
-      assert.fail(6 + '2', '12', 'type your error message if you want');
+      assert.equal(12, '12', 'numbers are coerced into strings with == ');
+      assert.notEqual({ value: 1 }, { value: 1 }, '== compares object references');
+      // needs a value, but the comparison is two objects and not the values therein 
+      assert.equal(6 * '2', '12', 'no more hints...');
+      // even in a equation, the string is coerced before error 
+      assert.notEqual(6 + '2', '12', 'type your error message if you want');
     });
     // #6
     test('#strictEqual, #notStrictEqual', function () {
