@@ -53,13 +53,12 @@ suite('Unit Tests', function () {
   // -----------------------------------------------------------------------------
 
   suite('Equality', function () {
-    // Equality assertions check == 
-
 
     // Within tests/1_unit-tests.js under the test labelled #5 in the Equality suite, change each assert to either assert.equal or assert.notEqual to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
 
     // #5
     test('#equal, #notEqual', function () {
+      // ==
       assert.equal(12, '12', 'numbers are coerced into strings with == ');
       assert.notEqual({ value: 1 }, { value: 1 }, '== compares object references');
       // needs a value, but the comparison is two objects and not the values therein 
@@ -67,12 +66,18 @@ suite('Unit Tests', function () {
       // even in a equation, the string is coerced before error 
       assert.notEqual(6 + '2', '12', 'type your error message if you want');
     });
+
+    // Within tests/1_unit-tests.js under the test labelled #6 in the Equality suite, change each assert to either assert.strictEqual or assert.notStrictEqual to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #6
     test('#strictEqual, #notStrictEqual', function () {
-      assert.fail(6, '6');
-      assert.fail(6, 3 * 2);
-      assert.fail(6 * '2', 12);
-      assert.fail([1, 'a', {}], [1, 'a', {}]);
+      // ===
+      assert.notStrictEqual(6, '6', "int vs string");
+      assert.strictEqual(6, 3 * 2, "int v int");
+      assert.strictEqual(6 * '2', 12, "coercion before comparison");
+      // the equation's string coercion happens before the comparison so its comparing two ints 
+      assert.notStrictEqual([1, 'a', {}], [1, 'a', {}], "array with int, string, object");
+      // again, the object throws it off? 
     });
     // #7
     test('#deepEqual, #notDeepEqual', function () {
