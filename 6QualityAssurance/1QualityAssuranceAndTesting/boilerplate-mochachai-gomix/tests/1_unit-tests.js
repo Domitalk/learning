@@ -11,11 +11,15 @@ suite('Unit Tests', function () {
       // assert that within this call of isNull function, the first value is null and the second value is the error message 
       assert.isNotNull(1, '1 is not null');
     });
+
+    // Within tests/1_unit-tests.js under the test labelled #2 in the Basic Assertions suite, change each assert to either assert.isDefined() or assert.isUndefined() to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #2
     test('#isDefined, #isUndefined', function () {
-      assert.fail(null, 'null is not undefined');
-      assert.fail(undefined, 'undefined IS undefined');
-      assert.fail('hello', 'a string is not undefined');
+      assert.isDefined(null, 'null is not undefined');
+      // null is categorically defined, as a no value definition rather than a missing 
+      assert.isUndefined(undefined, 'undefined IS undefined');
+      assert.isDefined('hello', 'a string is not undefined');
     });
     // #3
     test('#isOk, #isNotOk', function () {
