@@ -3,6 +3,8 @@ const assert = chai.assert;
 
 suite('Unit Tests', function () {
   suite('Basic Assertions', function () {
+    // Within tests/1_unit-tests.js under the test labelled #1 in the Basic Assertions suite, change each assert to either assert.isNull or assert.isNotNull to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #1
     test('#isNull, #isNotNull', function () {
       assert.fail(null, 'this is an optional error description - e.g. null is null');
