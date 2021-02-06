@@ -171,16 +171,24 @@ suite('Unit Tests', function () {
     return '# name: ' + name + ', age: ' + age + '\n';
   };
   suite('Strings', function () {
+
+    // Within tests/1_unit-tests.js under the test labelled #13 in the Strings suite, change each assert to either assert.isString or assert.isNotString to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #13
     test('#isString, #isNotString', function () {
-      assert.fail(Math.sin(Math.PI / 4), 'a float is not a string');
-      assert.fail(process.env.PATH, 'env vars are strings (or undefined)');
-      assert.fail(JSON.stringify({ type: 'object' }), 'a JSON is a string');
+      assert.isNotString(Math.sin(Math.PI / 4), 'a float is not a string');
+      assert.isString(process.env.PATH, 'env vars are strings (or undefined)');
+      assert.isString(JSON.stringify({ type: 'object' }), 'a JSON is a string');
     });
+
+    // include() and notInclude() work for strings too! include() asserts that the actual string contains the expected substring.
+
+    // Within tests/1_unit-tests.js under the test labelled #14 in the Strings suite, change each assert to either assert.include or assert.notInclude to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #14
     test('String #include, #notInclude', function () {
-      assert.fail('Arrow', 'row', "Arrow contains row...");
-      assert.fail('dart', 'queue', "But a dart doesn't contain a queue");
+      assert.include('Arrow', 'row', "Arrow contains row...");
+      assert.notInclude('dart', 'queue', "But a dart doesn't contain a queue");
     });
     // #15
     test('#match, #notMatch', function () {
