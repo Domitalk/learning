@@ -154,10 +154,14 @@ suite('Unit Tests', function () {
       assert.isArray('isThisAnArray?'.split(''), 'String.prototype.split() returns an Array');
       assert.isNotArray([1, 2, 3].indexOf(2), 'indexOf returns a number.');
     });
+
+    // Within tests/1_unit-tests.js under the test labelled #12 in the Arrays suite, change each assert to either assert.include or assert.notInclude to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #12
     test('Array #include, #notInclude', function () {
-      assert.fail(winterMonths, 'jul', "It's summer in july...");
-      assert.fail(backendLanguages, 'javascript', 'JS is a backend language !!');
+      // this one is really great as a test when validating some data 
+      assert.notInclude(winterMonths, 'jul', "It's summer in july...");
+      assert.include(backendLanguages, 'javascript', 'JS is a backend language !!');
     });
   });
 
