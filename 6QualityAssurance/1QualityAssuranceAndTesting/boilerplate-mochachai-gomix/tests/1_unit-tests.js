@@ -146,10 +146,13 @@ suite('Unit Tests', function () {
   const winterMonths = ['dec,', 'jan', 'feb', 'mar'];
   const backendLanguages = ['php', 'python', 'javascript', 'ruby', 'asp'];
   suite('Arrays', function () {
+
+    // Within tests/1_unit-tests.js under the test labelled #11 in the Arrays suite, change each assert to either assert.isArray or assert.isNotArray to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #11
     test('#isArray, #isNotArray', function () {
-      assert.fail('isThisAnArray?'.split(''), 'String.prototype.split() returns an Array');
-      assert.fail([1, 2, 3].indexOf(2), 'indexOf returns a number.');
+      assert.isArray('isThisAnArray?'.split(''), 'String.prototype.split() returns an Array');
+      assert.isNotArray([1, 2, 3].indexOf(2), 'indexOf returns a number.');
     });
     // #12
     test('Array #include, #notInclude', function () {
