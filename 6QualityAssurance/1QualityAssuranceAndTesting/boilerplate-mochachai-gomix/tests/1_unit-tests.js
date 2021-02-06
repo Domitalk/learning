@@ -106,13 +106,19 @@ suite('Unit Tests', function () {
       assert.isAbove(Math.PI, 3);
       assert.isAtMost(1 - Math.random(), 1);
     });
+
+    // Within tests/1_unit-tests.js under the test labelled #9 in the Comparisons suite, change each assert to either assert.isBelow or assert.isAtLeast to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #9
     test('#isBelow, #isAtLeast', function () {
-      assert.fail('world'.length, 5);
-      assert.fail(2 * Math.random(), 0);
-      assert.fail(5 % 2, 2);
-      assert.fail(2 / 3, 1);
+      assert.isAtLeast('world'.length, 5);
+      assert.isAtLeast(2 * Math.random(), 0);
+      assert.isBelow(5 % 2, 2);
+      // trick modulo 
+      assert.isBelow(2 / 3, 1);
     });
+
+    
     // #10
     test('#approximately', function () {
       assert.fail(weirdNumbers(0.5), 1, 0);
