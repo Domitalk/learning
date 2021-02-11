@@ -6,19 +6,51 @@ const server = require("../server");
 const chaiHttp = require("chai-http");
 chai.use(chaiHttp);
 
+
+// Mocha allows testing asyncronous operations. There is a small (BIG) difference. Can you spot it?
+
+// We can test our API endpoints using a plugin, called chai-http. Let's see how it works. And remember, API calls are asynchronous.
+
+// The following is an example of a test using chai-http for the 'GET /hello?name=[name] => "hello [name]"' suite. The test sends a name string in a url query string (?name=John) using a GETrequest to the server. In the end method's callback function, the response object (res) is received and contains the status property. The first assert.equal checks if the status is equal to 200. The second assert.equal checks that the response string (res.text) is equal to "hello John".
+
+// suite('GET /hello?name=[name] => "hello [name]"', function () {
+//   test("?name=John", function (done) {
+//     chai
+//       .request(server)
+//       .get("/hello?name=John")
+//       .end(function (err, res) {
+//         assert.equal(res.status, 200, "response status should be 200");
+//         assert.equal(
+//           res.text,
+//           "hello John",
+//           'response should be "hello John"'
+//         );
+//         done();
+//       });
+//   });
+// Notice the done parameter in the test's callback function. Calling it at the end without an argument is necessary to signal successful asynchronous completion.
+
 suite("Functional Tests", function () {
   suite("Integration tests with chai-http", function () {
+
+    // Within tests/2_functional-tests.js, alter the 'Test GET /hello with no name' test (// #1) to assert the status and the text response to make the test pass. Do not alter the arguments passed to the asserts.
+
+    // There should be no name in the query; the endpoint responds with hello Guest.
+
     // #1
     test("Test GET /hello with no name", function (done) {
       chai
         .request(server)
         .get("/hello")
         .end(function (err, res) {
-          assert.fail(res.status, 200);
-          assert.fail(res.text, "hello Guest");
+          assert.equal(res.status, 200);
+          assert.equal(res.text, "hello Guest");
           done();
         });
     });
+
+
+
     // #2
     test("Test GET /hello with your name", function (done) {
       chai
