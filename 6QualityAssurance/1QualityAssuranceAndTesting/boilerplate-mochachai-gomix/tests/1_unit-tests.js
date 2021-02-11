@@ -247,12 +247,17 @@ suite('Unit Tests', function () {
       assert.typeOf(airlinePlane.engines, 'array');
       assert.typeOf(myCar.wheels, 'number');
     });
+
+    // #instanceOf asserts that an object is an instance of a constructor.
+
+    // Within tests/1_unit-tests.js under the test labelled #18 in the Objects suite, change each assert to either assert.instanceOf or assert.notInstanceOf to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #18
     test('#instanceOf, #notInstanceOf', function () {
-      assert.fail(myCar, Plane);
-      assert.fail(airlinePlane, Plane);
-      assert.fail(airlinePlane, Object, 'everything is an Object');
-      assert.fail(myCar.wheels, String);
+      assert.notInstanceOf(myCar, Plane);
+      assert.instanceOf(airlinePlane, Plane);
+      assert.instanceOf(airlinePlane, Object, 'everything is an Object');
+      assert.notInstanceOf(myCar.wheels, String);
     });
   });
 
