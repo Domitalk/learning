@@ -49,16 +49,18 @@ suite("Functional Tests", function () {
         });
     });
 
+    // Within tests/2_functional-tests.js, alter the 'Test GET /hello with your name' test (// #2) to assert the status and the text response to make the test pass.
 
-
+    // Send your name in the query, appending ?name=<your_name> to the route. The endpoint responds with 'hello <your_name>'.
+    
     // #2
     test("Test GET /hello with your name", function (done) {
       chai
         .request(server)
-        .get("/hello?name=xy_z")
+        .get("/hello?name=Dom")
         .end(function (err, res) {
-          assert.fail(res.status, 200);
-          assert.fail(res.text, "hello xy_z");
+          assert.equal(res.status, 200);
+          assert.equal(res.text, "hello Dom");
           done();
         });
     });
