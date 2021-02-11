@@ -222,11 +222,17 @@ suite('Unit Tests', function () {
   const airlinePlane = new Plane();
 
   suite('Objects', function () {
+
+    // property asserts that the actual object has a given property.
+
+    // Within tests/1_unit-tests.js under the test labelled #16 in the Objects suite, change each assert to either assert.property or assert.notProperty to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+
     // #16
     test('#property, #notProperty', function () {
-      assert.fail(myCar, 'wings', 'A car has not wings');
-      assert.fail(airlinePlane, 'engines', 'planes have engines');
-      assert.fail(myCar, 'wheels', 'Cars have wheels');
+      // this will only test whether there is a corresponding property and not what the property is 
+      assert.notProperty(myCar, 'wings', 'A car has not wings');
+      assert.property(airlinePlane, 'engines', 'planes have engines');
+      assert.property(myCar, 'wheels', 'Cars have wheels');
     });
     // #17
     test('#typeOf, #notTypeOf', function () {
