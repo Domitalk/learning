@@ -65,14 +65,29 @@ suite("Functional Tests", function () {
         });
     });
 
+    // Within tests/2_functional-tests.js, alter the 'send {surname: "Colombo"}' test (// #3):
 
+    // Send the following JSON response as a payload:
+    
+    // {
+    //   "surname": "Colombo"
+    // }
+    // Check for the following, within the request.end callback:
+    
+    // status
+    // type
+    // body.name
+    // body.surname
+    // Follow the assertion order above - we rely on it. Be sure to remove assert.fail(), once complete.
 
     // #3
     test('send {surname: "Colombo"}', function (done) {
       chai
         .request(server)
         .put("/travellers")
+        // put/get as the req type
         .send({ surname: 'Colombo' })
+        // the body of the fetch 
         .end(function (err, res) {
           assert.equal(res.status, 200);
           assert.equal(res.type, 'application/json');
@@ -81,11 +96,37 @@ suite("Functional Tests", function () {
           done();
         });
     });
+
+    // Within tests/2_functional-tests.js, alter the 'send {surname: "da Verrazzano"}' test (// #4):
+
+    // Send the following JSON response as a payload to the /travellers route:
+
+    // {
+    //   "surname": "da Verrazzano"
+    // }
+    // Check for the following, within a request.end callback:
+
+    // status
+    // type
+    // body.name
+    // body.surname
+    // Follow the assertion order above - we rely on it. Be sure to remove assert.fail(), once complete.
+
     // #4
     test('send {surname: "da Verrazzano"}', function (done) {
-      assert.fail();
-
-      done();
+      chai
+        .request(server)
+        .put("/travellers")
+        // put/get as the req type
+        .send({ surname: 'da Verrazzano' })
+        // the body of the fetch 
+        .end(function (err, res) {
+          assert.equal(res.status, 200);
+          assert.equal(res.type, 'application/json');
+          assert.equal(res.body.name, 'Giovanni');
+          assert.equal(res.body.surname, 'da Verrazzano');
+          done();
+        });
     });
   });
 });
