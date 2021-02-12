@@ -64,15 +64,20 @@ suite("Functional Tests", function () {
           done();
         });
     });
+
+
+
     // #3
     test('send {surname: "Colombo"}', function (done) {
       chai
         .request(server)
         .put("/travellers")
-
+        .send({ surname: 'Colombo' })
         .end(function (err, res) {
-          assert.fail();
-
+          assert.equal(res.status, 200);
+          assert.equal(res.type, 'application/json');
+          assert.equal(res.body.name, 'Cristoforo');
+          assert.equal(res.body.surname, 'Colombo');
           done();
         });
     });
