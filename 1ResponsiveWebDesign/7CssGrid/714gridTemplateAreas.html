@@ -3,7 +3,12 @@
     .item2{background:LightSalmon;}
     .item3{background:PaleTurquoise;}
     .item4{background:LightPink;}
-    .item5{background:PaleGreen;}
+    .item5{background:PaleGreen;
+
+        /* this will make item5 go where footers go in the grid-template-area */
+        grid-area: footer; 
+
+    }
   
     .container {
       font-size: 40px;
@@ -16,7 +21,9 @@
       grid-gap: 10px;
       grid-template-areas:
 
-        you can group cells of grid into area and give it a name using grid-template-areas: ; each quote block represents a row period means empty cell 
+        /* you can group cells of grid into area and give it a name using grid-template-areas: ; each quote block represents a row period means empty cell  */
+
+        /* you can ref the new names given by using grid-area: ____; to a child to show where it should go in this grid-template-area  */
 
       /* Only change code below this line */
         "header header header"
