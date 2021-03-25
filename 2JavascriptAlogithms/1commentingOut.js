@@ -5,3 +5,6 @@
 var myName; 
 
 // JS has 8 diff datatypes: undefined, null, boolean, string, symbol, bigint, number and object
+
+// assign val to var
+myName = "Dom"
