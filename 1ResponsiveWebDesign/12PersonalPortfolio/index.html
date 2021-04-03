@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> 
 <style>
+    /* User Story #9: My portfolio should have at least one media query. */
+    @media (min-width: 0px) {
+        body {
+            background-color: white;
+        }
+    }
+
+    /* User Story #10: The height of the welcome section should be equal to the height of the viewport. */
+    #welcome-section {
+        height: 100vh
+    }
+
+
 
 </style>
 <body>
+    <!-- User Story #6: My portfolio should have a navbar with an id of navbar. -->
+    <nav id="navbar">
+        <!-- User Story #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. -->
+        <a class="nav-link" href="#welcome-section">Welcome Section</a>
+        <a href="#projects">Projects</a>
+        <a href="#nav-element">nav-element</a>
+        <!-- User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab. -->
+        <a id="profile-link" href="https://github.com/Domitalk" target="_blank">Github</a>
+
+    </nav>
+
+
     <!-- User Story #1: My portfolio should have a welcome section with an id of welcome-section. -->
     <div id="welcome-section">
         <!-- User Story #2: The welcome section should have an h1 element that contains text. -->
@@ -11,6 +36,7 @@
     </div>
     <!-- User Story #3: My portfolio should have a projects section with an id of projects. -->
     <div id="projects">
+        <h1>Projects</h1>
         <!-- User Story #4: The projects section should contain at least one element with a class of project-tile to hold a project. -->
         <div class="project-tile">
             <a href=""></a>
@@ -19,6 +45,7 @@
         <!-- User Story #5: The projects section should contain at least one link to a project. -->
     </div>
 
+    <div id="nav-element">nav elemenet</div>
 
 
 
