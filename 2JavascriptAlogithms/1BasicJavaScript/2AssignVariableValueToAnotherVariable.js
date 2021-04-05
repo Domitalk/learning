@@ -47,3 +47,32 @@ var titleCaseOver;
 studlyCapVar = 10;
 properCamelCase = "A String";
 titleCaseOver = 9000;
+
+
+var sum = 10 + 10;
+var difference = 45 - 33;
+var product = 8 * 10;
+var quotient = 66 / 33;
+
+var myVar = 87;
+myVar++;
+// You can easily increment or add one to a variable with the ++ operator.
+
+// i++;
+// is the equivalent of
+
+// i = i + 1;
+// Note: The entire line becomes i++;, eliminating the need for the equal sign.
+
+var myVar = 11;
+myVar--;
+
+// You can easily decrement or decrease a variable by one with the -- operator.
+
+// i--;
+// is the equivalent of
+
+// i = i - 1;
+// Note: The entire line becomes i--;, eliminating the need for the equal sign.
+
+
