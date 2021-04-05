@@ -75,4 +75,35 @@ myVar--;
 // i = i - 1;
 // Note: The entire line becomes i--;, eliminating the need for the equal sign.
 
+var ourDecimal = 5.7;
+//  floating point numbers or floats.
+var myDecimal = 1.1
 
+// In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
+var product = 2.0 * 2.5;
+var quotient = 4.4 / 2.0; 
+
+// The remainder operator % gives the remainder of the division of two numbers.
+var remainder = 11 % 3
+
+var a = 3;
+var b = 17;
+var c = 12;
+
+a = a + 12 
+// because a = a + ___ is so common, we have += operator 
+a += 12;
+b += 9;
+c += 7;
+// similarly, -= 
+a -= 6;
+b -= 15;
+c -= 1;
+// and the *= operator 
+a *= 5;
+b *= 3;
+c *= 10;
+// and the /= operator 
+a /= 12;
+b /= 4;
+c /= 11;
