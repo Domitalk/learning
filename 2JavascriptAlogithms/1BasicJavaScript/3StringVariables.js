@@ -57,3 +57,6 @@ myStr = "Hello World";
 var lastName = "Lovelace";
 
 var thirdLetterOfLastName = lastName[2]; 
+//use .length to work from the end of the available index
+var lastLetterOfLastName = lastName[lastName.length - 1];
+var secondToLastLetterOfLastName = lastName[lastName.length - 2];
