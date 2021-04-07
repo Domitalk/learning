@@ -79,3 +79,29 @@ var myArray = [50,60,70];
 let myData = myArray[0]
 // arrays are mutable 
 myArray[1] = 20
+
+// chaining index for AoA
+var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+var myData = myArray[2][1];
+
+// push to end of array 
+var myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3])
+
+// pop last element from array
+var myArray = [["John", 23], ["cat", 2]];
+var removedFromMyArray = myArray.pop();
+// removedFromMyArray == ["cat", 2]
+// myArray == [["John", 23]]
+
+// shift first element from array 
+var myArray = [["John", 23], ["dog", 3]];
+var removedFromMyArray = myArray.shift();
+// removedFromMyArray == ["John", 23]
+// myArray == [["dog", 3]]
+
+// unshift a new element to the beginning of an array
+var myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+myArray.unshift(["Paul", 35])
+// myArray == [["Paul", 35], ["dog", 3]]
