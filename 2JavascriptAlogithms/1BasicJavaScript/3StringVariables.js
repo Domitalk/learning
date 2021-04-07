@@ -60,3 +60,22 @@ var thirdLetterOfLastName = lastName[2];
 //use .length to work from the end of the available index
 var lastLetterOfLastName = lastName[lastName.length - 1];
 var secondToLastLetterOfLastName = lastName[lastName.length - 2];
+
+//Madlibs using multiple variables 
+var myNoun = "dog";
+var myAdjective = "big";
+var myVerb = "ran";
+var myAdverb = "quickly";
+
+var wordBlanks = "My " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + "."; 
+
+// arrays can hold different datatypes
+var myArray = ["string", 1];
+// multi-dimensional arrays 
+var myArray = [[1, 2], ["a", "b"]];
+
+// index lookup 
+var myArray = [50,60,70];
+let myData = myArray[0]
+// arrays are mutable 
+myArray[1] = 20
