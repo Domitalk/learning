@@ -105,3 +105,63 @@ var myArray = [["John", 23], ["dog", 3]];
 myArray.shift();
 myArray.unshift(["Paul", 35])
 // myArray == [["Paul", 35], ["dog", 3]]
+
+// The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity i.e.
+// There should be at least 5 sub-arrays in the list.
+
+var myList = [];
+myList.push(["a", 1])
+myList.push(["b", 2])
+myList.push(["c", 3])
+myList.push(["d", 4])
+myList.push(["e", 5])
+
+// define a reusable function and call it 
+const reusableFunction = () => {
+    console.log("Hi World")
+}  
+reusableFunction()
+
+// define reusable function wtih arguments 
+const functionWithArgs = (arg1, arg2) => {
+    console.log(arg1 + arg2)
+}
+functionWithArgs(1, 2)
+
+
+// var makes scoped variable, no var definition makes a global variable 
+// top level scope myGlobal 
+var myGlobal = 10 
+function fun1() {
+    // no var so this automatically becomes a global 
+    oopsGlobal = 5
+}
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+function myLocalScope() {
+  var myVar = ""
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+// this should throw an error because myVar is scoped inside of the myLocalScope function 
+console.log('outside myLocalScope', myVar);
+
+
+var outerWear = "T-Shirt";
+function myOutfit() {
+  // local scope take precedence over the global 
+  var outerWear = "sweater"
+  return outerWear;
+}
+
+myOutfit();
