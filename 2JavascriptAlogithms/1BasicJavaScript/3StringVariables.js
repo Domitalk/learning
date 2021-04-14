@@ -165,3 +165,20 @@ function myOutfit() {
 }
 
 myOutfit();
+
+// return automatically 
+const timesFive = (arg) => {
+  return arg * 5
+}
+
+// when there is no return value, the function call returns undefined. 
+// they still change sum but it still doesn't return anything
+var sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+function addFive() {
+  sum +=5
+}
+addThree();
+addFive();
