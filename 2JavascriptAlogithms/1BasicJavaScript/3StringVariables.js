@@ -182,3 +182,11 @@ function addFive() {
 }
 addThree();
 addFive();
+
+
+var processed = 0;
+function processArg(num) {
+  return (num + 3) / 5;
+}
+// everything to the right of assignment (=) will be processed first 
+processed = processArg(7)
