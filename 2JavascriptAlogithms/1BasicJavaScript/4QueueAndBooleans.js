@@ -119,3 +119,21 @@ function testLessOrEqual(val) {
   return "More Than 24";
 }
 testLessOrEqual(10);
+
+// "logical AND" && checks both operands 
+function testLogicalAnd(val) {
+  if (val <= 50 && val >= 25) {
+    return "Yes";
+  }
+  return "No";
+}
+testLogicalAnd(10);
+
+// "logical OR" || operator 
+function testLogicalOr(val) {
+  if (val > 20 || val < 10) {
+    return "Outside";
+  }
+  return "Inside";
+}
+testLogicalOr(15);
