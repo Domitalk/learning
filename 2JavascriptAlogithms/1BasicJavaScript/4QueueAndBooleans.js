@@ -313,3 +313,24 @@ function chainToSwitch(val) {
   return answer;
 }
 chainToSwitch(7);
+
+// returning boolean values as a result of a declarative comparison statement 
+function isLess(a, b) {
+  // if (a < b) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+  return a < b
+}
+isLess(10, 15);
+
+// a return statement will make the whole function stop executing 
+function abTest(a, b) {
+  if (a < 0 || b < 0) {
+    return undefined 
+  }
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+abTest(2,2);
