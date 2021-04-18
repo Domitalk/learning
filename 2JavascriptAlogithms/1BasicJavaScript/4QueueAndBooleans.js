@@ -334,3 +334,36 @@ function abTest(a, b) {
   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
 abTest(2,2);
+
+
+var count = 0;
+function cc(card) {
+  // change count 
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count += 1
+      break;
+    case 7:
+    case 8:
+    case 9:
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count -=1
+      break;
+  }
+
+  // return count and string 
+  let whatToDo = count > 0 ? "Bet" : "Hold"
+  return `${count} ${whatToDo}`
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
