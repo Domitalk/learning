@@ -64,8 +64,6 @@ delete myDog.tails
 // using object instead of switch case 
 function phoneticLookup(val) {
     var result = "";
-  
-    // Only change code below this line
     let lookup = {
       alpha: "Adams",
       bravo: "Boston",
@@ -94,10 +92,53 @@ function phoneticLookup(val) {
     //     result = "Frank";
     // }
     result = lookup[val]
-  
-    // Only change code above this line
     return result;
-  }
-  
-  phoneticLookup("charlie");
-  
+}
+phoneticLookup("charlie");
+
+// hasOwnProperty returns true or false if the key/val pair exists or not
+function checkObj(obj, checkProp) {
+    return obj.hasOwnProperty(checkProp) ? obj[checkProp] : "Not Found"
+}
+
+
+// create nested objects 
+// Add a new album to the myMusic array. Add artist and title strings, release_year number, and a formats array of strings.
+var myMusic = [
+    {
+      "artist": "Billy Joel",
+      "title": "Piano Man",
+      "release_year": 1973,
+      "formats": [
+        "CD",
+        "8T",
+        "LP"
+      ],
+      "gold": true
+    }, 
+    {
+      "artist": "A",
+      "title": "a",
+      "release_year": 2000,
+      "formats": [
+        "CD", 
+        "MP3"
+      ]
+    }
+];
+
+
+// access nested objects properties 
+// Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.
+var myStorage = {
+    "car": {
+      "inside": {
+        "glove box": "maps",
+        "passenger seat": "crumbs"
+       },
+      "outside": {
+        "trunk": "jack"
+      }
+    }
+};
+var gloveBoxContents = myStorage.car.inside["glove box"];
