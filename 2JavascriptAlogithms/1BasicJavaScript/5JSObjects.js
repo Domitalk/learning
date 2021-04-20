@@ -142,3 +142,67 @@ var myStorage = {
     }
 };
 var gloveBoxContents = myStorage.car.inside["glove box"];
+
+
+// use index to access items in array, can be nested just like objects 
+// Using dot and bracket notation, set the variable secondTree to the second item in the trees list from the myPlants object.
+var myPlants = [
+    {
+      type: "flowers",
+      list: [
+        "rose",
+        "tulip",
+        "dandelion"
+      ]
+    },
+    {
+      type: "trees",
+      list: [
+        "fir",
+        "pine",
+        "birch"
+      ]
+    }
+];
+var secondTree = myPlants[1].list[1];
+
+
+// CRUD within a JSON object 
+// Setup
+var collection = {
+    2548: {
+      albumTitle: 'Slippery When Wet',
+      artist: 'Bon Jovi',
+      tracks: ['Let It Rock', 'You Give Love a Bad Name']
+    },
+    2468: {
+      albumTitle: '1999',
+      artist: 'Prince',
+      tracks: ['1999', 'Little Red Corvette']
+    },
+    1245: {
+      artist: 'Robert Palmer',
+      tracks: []
+    },
+    5439: {
+      albumTitle: 'ABBA Gold'
+    }
+  };
+  
+  // Only change code below this line
+  function updateRecords(object, id, prop, value) {
+    if (prop != "tracks" && value.length > 0) {
+      object[id][prop] = value 
+    } else if (prop == "tracks" && !object[id].tracks) {
+      object[id].tracks = [value]
+    } else if (prop == "tracks" && value.length > 0) {
+      object[id].tracks.push(value)
+    } else if (value.length == 0) {
+      delete object[id][prop]
+    }
+  
+  
+    return object;
+  }
+  
+  updateRecords(collection, 5439, 'artist', 'ABBA');
