@@ -31,3 +31,15 @@ function convertToInteger(str) {
     return parseInt(str, 2)
 }
 convertToInteger("10011");
+
+// conditonal ternary operator 
+function checkEqual(a, b) {
+    return a == b ? "Equal" : "Not Equal"
+}
+checkEqual(1, 2);
+
+// chained conditional ternary operators 
+function checkSign(num) {
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+checkSign(10);
