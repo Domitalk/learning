@@ -17,3 +17,17 @@ function randomWholeNum() {
 function randomRange(myMin, myMax) {
     return Math.floor(Math.random() * (myMax - myMin + 1) + myMin)
 }
+
+// parseInt forces a conversion into Int datatype 
+function convertToInteger(str) {
+    return parseInt(str)
+}
+convertToInteger("56");
+
+
+// the second argument is the radix which specifies the base of the number in the string between 2 and 36. 
+// 2 is binary  so in this situation it takes binary 10011 and makes it into 57
+function convertToInteger(str) {
+    return parseInt(str, 2)
+}
+convertToInteger("10011");
