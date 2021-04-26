@@ -43,3 +43,55 @@ function checkSign(num) {
     return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
 }
 checkSign(10);
+
+
+// this should return [5, 4, 3, 2, 1]
+function countdown(n){
+    if (n < 1) {
+      return []
+    } else {
+        // 4
+      const countArray = countdown(n - 1) 
+      // 5 unshift == before 
+      countArray.unshift(n)
+      return countArray 
+    }
+}
+console.log(countdown(5))
+
+// this should return [1, 2, 3, 4, 5]
+function countup(n) {
+    if (n < 1) {
+      return [];
+    } else {
+        // countArray = [4] 
+      const countArray = countup(n - 1);
+        // 5 push == after 
+      countArray.push(n);
+      return countArray;
+    }
+}
+console.log(countup(5));
+  
+
+// rangeOfNumbers(1, 5) should return [1, 2, 3, 4, 5].
+function rangeOfNumbers(startNum, endNum) {
+    // if (endNum - startNum === 0) {
+    //   return [startNum];
+    // } else {
+    //   var numbers = rangeOfNumbers(startNum, endNum - 1);
+    //   numbers.push(endNum);
+    //   return numbers;
+    // }
+    if (startNum == endNum) {
+      return [startNum]
+    } else {
+        // incremented + 1 startNum
+      let returnArr = rangeOfNumbers(startNum + 1, endNum) 
+      // put before the original startNum
+      returnArr.unshift(startNum)
+      return returnArr
+    }
+};
+  
+  
