@@ -31,3 +31,49 @@ function printManyTimes(str) {
   }
 }
 printManyTimes("freeCodeCamp");
+
+// const are mutable but not reassignable 
+const s = [5, 7, 2];
+function editInPlace() {
+  s.unshift(s.pop(2))
+}
+editInPlace();
+//  [2, 5, 7]
+
+// freeze will make it unmutable 
+function freezeObj() {
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+  Object.freeze(MATH_CONSTANTS)
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch(ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+const PI = freezeObj();
+
+// convert a old school function into an arrow func 
+var magic = function() {
+  return new Date();
+};
+const magic = () => {
+  return new Date()
+}
+
+// arrow func with args 
+var myConcat = function(arr1, arr2) {
+  return arr1.concat(arr2);
+};
+const myConcat = (arr1, arr2) => {
+  return arr1.concat(arr2)
+}
+
+// default values 
+const increment = (number, value) => number + value;
+
+const increment = (number, value = 1) => {
+  return number + value 
+}
