@@ -95,3 +95,18 @@ const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 let arr2;
 arr2 = [...arr1];  
 console.log(arr2);
+
+
+
+// destructuring instead of assigning one at a time 
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// const today = HIGH_TEMPERATURES.today;
+// const tomorrow = HIGH_TEMPERATURES.tomorrow;
+
+const { today, tomorrow } = HIGH_TEMPERATURES
+
