@@ -137,3 +137,9 @@ const LOCAL_FORECAST = {
 
 const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST
 
+
+// destructuring arrays 
+const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
+
+let a = 8, b = 6;
+[b, a] = [a, b]
